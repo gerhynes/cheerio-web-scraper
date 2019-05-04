@@ -12,15 +12,22 @@ request("https://blog.getbootstrap.com/", (error, response, html) => {
 
     // const output = post.find("h1").text();
     // const output = post.children("h1").text();
+
     // const output = post
     //   .children("h1")
     //   .next()
     //   .text();
-    const output = post
-      .children("h1")
-      .parent()
-      .text();
 
-    console.log(output);
+    // const output = post
+    //   .children("h1")
+    //   .parent()
+    //   .text();
+
+    $("a").each((i, el) => {
+      const item = $(el).text();
+      const link = $(el).attr("href");
+
+      console.log(link);
+    });
   }
 });
